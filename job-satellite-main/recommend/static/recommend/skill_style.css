@@ -1,0 +1,336 @@
+div.select-container {
+  width: 100%;
+  padding: 0;
+}
+div.nav-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #777;
+  background-color: #eee;
+}
+div.skill-btn,
+div.job-btn {
+  width: 100%;
+  height: 2.4em;
+  padding: 0.4em;
+  color: #444;
+  font-size: 0.9em;
+  text-align: center;
+  justify-self: start;
+  cursor: pointer;
+}
+div.skill-btn:hover,
+div.job-btn:hover {
+  border-bottom: 3px solid #666;
+}
+div.skill-btn {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+div.job-btn {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+div.section-container {
+  padding: 0 15px;
+}
+div.section-box {
+  border: 1px solid #aaa;
+  border-top: 0;
+}
+div.list-box {
+  background-color: rgb(188, 229, 224);
+}
+div.skill-noitem,
+div.job-noitem {
+  padding: 20px 5px 20px 5px;
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+  background-color: #eee;
+}
+div.selected-skill-item,
+div#jobListBox div.selected-job-item {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  border-bottom: 1px solid #aaa;
+}
+div.selected-skill-item:hover,
+div#jobListBox div.selected-job-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+div.skill-close-btn {
+  color: #999;
+}
+div.skill-text {
+  padding: 10px 5px 10px 15px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  cursor: pointer;
+}
+div.skill-close-btn {
+  padding: 10px 5px 10px 5px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  cursor: pointer;
+}
+div.add-item-box {
+  padding: 7px;
+}
+div.add-item-btn {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  line-height: 48px;
+  border: 1px dashed #ccc;
+  border-radius: 15px;
+  color: #999;
+  font-size: 1.4em;
+  text-align: center;
+  cursor: pointer;
+}
+div.add-item-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+div.search-btn {
+  width: 200px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: rgb(27, 118, 170);
+  text-align: center;
+  color: #eee;
+  font-size: 2em;
+  cursor: pointer;
+}
+div.btns-container {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  width: 300px;
+  margin: 0 auto;
+}
+div.btns-container > div.search-btn {
+  width: 170px;
+}
+div.plus-option {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin: 15px 0 15px 30px;
+  text-align: center;
+  line-height: 28px;
+  background-color: tomato;
+  border-radius: 25px;
+  color: #eee;
+  font-size: 2em;
+  cursor: pointer;
+}
+div.plus-option:hover {
+  background-color: rgb(255, 123, 100);
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+div.search-btn:hover {
+  background-color: rgb(27, 137, 201);
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+div.layer-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 20px 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+div.layer-skill-container,
+div.layer-job-container {
+  overflow: hidden;
+  background-color: #eee;
+  border-radius: 7px;
+}
+div.layer-skill-container {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+}
+div.layer-item-container {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+}
+div.category-box {
+  padding: 5px;
+}
+div.layer-category {
+  padding: 5px;
+}
+div.layer-category-job {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+}
+div.layer-category {
+  border-right: 1px solid #ccc;
+}
+div.category {
+  padding: 5px 0;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-right: 5px solid rgba(0, 0, 0, 0);
+}
+div.category:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 5px solid rgba(0, 0, 0, 0.2);
+}
+div.layer-confirm {
+  padding: 10px;
+  background-color: rgb(179, 24, 24);
+  text-align: center;
+  font-size: 1.4em;
+  color: #ddd;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  cursor: pointer;
+}
+div.layer-confirm:hover {
+  background-color: rgb(202, 41, 41);
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+div.layer-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5px;
+}
+div.layer-item > div.skill-item {
+  margin-top: 2px;
+  padding: 3px 10px;
+  /* border: 1px solid rgba(0, 0, 0, 0); */
+  cursor: pointer;
+}
+div.layer-item > div.skill-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+div.selected-skill-option,
+div.selected-job-option {
+  color: #eee !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+div.skill-category-title,
+div.job-category-title {
+  padding: 10px;
+  background-color: #ddd;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-size: 1.2em;
+}
+div.skill-category-title {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+div#jobLayer div.job-item {
+  padding: 10px 0;
+  margin-top: 2px;
+  margin-right: 2px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+div#jobLayer div.job-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+div.favor-option-container {
+  padding: 5px;
+  border-top: 1px solid #ccc;
+}
+div.favor-title {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #444;
+}
+div.select-option-box {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  width: 280px;
+  margin: 0 auto;
+}
+div.select-option-title {
+  padding: 5px;
+  text-align: right;
+  line-height: 29px;
+}
+div.select-option {
+  padding: 5px;
+}
+div.select-option > select {
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+/* 가로 해상도가 576px 보다 큰 화면에 적용 */
+@media screen and (min-width: 576px) {
+  div.skill-btn,
+  div.job-btn {
+    height: 3em;
+    padding: 0.6em;
+    font-size: 1.4em;
+  }
+  div.layer-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+  }
+  div.skill-item {
+    margin-left: 2px;
+  }
+  div.skill-close-btn,
+  div.skill-text {
+    padding: 15px 5px 15px 35px;
+  }
+  div.selected-skill-item,
+  div#jobListBox div.selected-job-item {
+    grid-template-columns: 1fr 100px;
+  }
+}
+
+/* 가로 해상도가 768px 보다 큰 화면에 적용 */
+@media screen and (min-width: 768px) {
+  div.section-box {
+    width: 700px;
+    margin: 0 auto;
+  }
+  div.layer-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
+  }
+  div.layer-skill-container,
+  div.layer-job-container {
+    width: 720px;
+    margin: 50px auto;
+  }
+  div.skill-close-btn,
+  div.skill-text {
+    padding: 20px 5px 20px 65px;
+    font-size: 1.2em;
+  }
+  div.selected-skill-item,
+  div#jobListBox div.selected-job-item {
+    grid-template-columns: 1fr 150px;
+  }
+}
+
+/* 가로 해상도가 992px 보다 큰 화면에 적용 */
+@media screen and (min-width: 992px) {
+}
+/* 가로 해상도가 1200px 보다 큰 화면에 적용 */
+@media screen and (min-width: 1225px) {
+}

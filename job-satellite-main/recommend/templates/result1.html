@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% csrf_token %}
+<h1>Result page 1</h1>
+<fieldset style="height: 500px">
+        <legend>나의 맞춤형 지원가능 IT직무 리스트</legend>
+    <p>1:</p>{{job1}}
+    <p>2:</p>{{job2}}
+    <p>3:</p>{{job3}}
+</fieldset>
+<a href="{% url 'recommend:infojob' %}" >다른 직무의 필요역량을 확인하고 싶으신가요?</a>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/470abda661.js"
+      crossorigin="anonymous"
+    ></script>
+    {% if request.path == '/reco/' %}
+    <script src="{% static 'recommend/base.js' %}"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'recommend/skill_style.css' %}"
+    />
+    {% endif %} {%if request.path == '/reco/result/job/' %}
+    <script src="{% static 'recommend/result_job.js' %}"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'recommend/result_style.css' %}"
+    />
+    {% endif %} {%if request.path == '/reco/result/skill/' %}
+    <script src="{% static 'recommend/result_skill.js' %}"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'recommend/result_style.css' %}"
+    />
+    {% endif %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'recommend/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'recommend/footer.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'recommend/favicon.ico' %}"
+    />
+    <title>JOB SATELLITE</title>
+  </head>
+  <body>
+    {% block content %} {% endblock %}
+    <footer>
+      <div id="footer-wrap">
+        <div class="footer-top">
+          <div class="about-us">
+            <h3>ABOUT US</h3>
+            <p>
+              It was popularised in the 1960s with the release of Letraset
+              sheets containing Lorem Ipsum passages, and more recently with
+              desktop publishing software like Aldus PageMaker including
+              versions of Lorem Ipsum.
+            </p>
+          </div>
+          <div class="contact-us">
+            <h3>CONTACT US</h3>
+            <p>29, Chungmu-ro, Jung-gu, Seoul, Republic of Korea</p>
+            <p>+82 10-0000-0000</p>
+            <p>support&#64;jobsatellite.com</p>
+          </div>
+          <div class="follow-us">
+            <h3>FOLLOW US</h3>
+            <i class="fab fa-twitter-square"></i>
+            &nbsp;&nbsp;
+            <i class="fab fa-youtube-square"></i>
+            &nbsp;&nbsp;
+            <i class="fab fa-facebook-square"></i>
+            &nbsp;&nbsp;
+            <i class="fab fa-instagram-square"></i>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <span>&copy; 2021 ASIA TEAM 4. All rights reserved.</span>
+          </div>
+          <div class="footer-gnb">Privacy Policy Terms of Service</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

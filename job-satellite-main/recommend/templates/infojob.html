@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% csrf_token %}
+<h1>Select the job you want</h1>
+<form  method="post" action="{% url 'recommend:result2'%}">
+    {% csrf_token %}
+<fieldset style="height: 500px">
+        <legend>희망하는 직무의 요구 역량 확인하기</legend>
+            <div>
+            <label style="font-size: 30px">직무</label><br>
+            <select name="job" style="height: 30px">
+                {%for s in job%}
+
+                 <option value="{{s.id}}">{{s.name}}</option>
+                {%endfor%}
+
+            </select>
+            </div><br><br>
+        <input style="height: 50px;width:200px " type="submit">
+</fieldset>
+</form>
+</body>
+</html>

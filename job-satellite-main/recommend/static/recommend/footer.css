@@ -1,0 +1,70 @@
+/* FOOTER */
+footer {
+  overflow: hidden;
+  padding: 10px 5px;
+  margin-top: 80px;
+  background-color: #3c6175;
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+}
+.footer-top {
+  overflow: hidden;
+  padding: 5px 0;
+  border-bottom: 1px solid #aaa;
+}
+.footer-top h3 {
+  overflow: hidden;
+  padding: 5px 0;
+  font-size: 16px;
+}
+.footer-top > .about-us {
+  overflow: hidden;
+  padding: 5px 0;
+}
+.footer-top > .contact-us {
+  overflow: hidden;
+  padding: 5px 0;
+}
+.contact-us > p > a,
+.follow-us > a,
+.footer-gnb > a {
+  color: #aaa;
+}
+.footer-top > .follow-us {
+  overflow: hidden;
+  padding: 5px 0;
+}
+.follow-us {
+  font-size: 24px;
+}
+.footer-bottom {
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+/* 가로 해상도가 576px 보다 큰 화면에 적용 */
+@media screen and (min-width: 576px) {
+}
+
+/* 가로 해상도가 768px 보다 큰 화면에 적용 */
+@media screen and (min-width: 768px) {
+}
+
+/* 가로 해상도가 992px 보다 큰 화면에 적용 */
+@media screen and (min-width: 992px) {
+  /* FOOTER */
+  #footer-wrap .about-us,
+  #footer-wrap .contact-us,
+  #footer-wrap .follow-us {
+    width: 280px;
+    padding: 10px;
+    float: left;
+  }
+  #footer-wrap .follow-us {
+    float: right;
+  }
+}
+/* 가로 해상도가 1200px 보다 큰 화면에 적용 */
+@media screen and (min-width: 1225px) {
+}

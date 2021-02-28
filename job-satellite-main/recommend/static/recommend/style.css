@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  outline: 0;
+  text-decoration: none !important;
+}
+img {
+  border: 0;
+}
+body {
+  background-color: #eff3f7;
+  height: 100%;
+}
+header {
+  width: 100%;
+  background-color: #eee;
+}
+div.header {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(27, 118, 170);
+}
+div.header > a {
+  color: rgb(27, 118, 170);
+}
+div.header > a:hover {
+  color: rgb(30, 147, 214);
+}
+/* 가로 해상도가 576px 보다 큰 화면에 적용 */
+@media screen and (min-width: 576px) {
+}
+
+/* 가로 해상도가 768px 보다 큰 화면에 적용 */
+@media screen and (min-width: 768px) {
+}
+
+/* 가로 해상도가 992px 보다 큰 화면에 적용 */
+@media screen and (min-width: 992px) {
+}
+/* 가로 해상도가 1200px 보다 큰 화면에 적용 */
+@media screen and (min-width: 1225px) {
+}

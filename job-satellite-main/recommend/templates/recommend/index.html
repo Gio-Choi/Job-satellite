@@ -1,0 +1,183 @@
+{% extends 'recommend/base.html' %} {% block content %}
+<div class="layer-background" id="skillLayer" style="display: none">
+  <div class="layer-skill-container">
+    <div class="skill-category-title">기술을 선택해주세요.</div>
+    <div class="layer-category">
+      {% for key, category in skillData.items %}
+      <div class="category" id="category{{category.id}}">{{key}}</div>
+      {% endfor %}
+    </div>
+
+    {% for key, category in skillData.items %}
+    <div
+      class="layer-item-container"
+      id="categoryList{{category.id}}"
+      style="display: none"
+    >
+      <div class="layer-item">
+        {% for skill in category.skills %}
+        <div class="skill-item" id="item{{skill.1}}">{{skill.0}}</div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    <div class="layer-confirm" id="skillConfirm">확인</div>
+  </div>
+</div>
+<div class="layer-background" id="jobLayer" style="display: none">
+  <div class="layer-job-container">
+    <div class="job-category-title">직무를 선택해주세요.</div>
+    <div class="layer-category-job">
+      {% for jobItems in jobData %}
+      <div class="job-item" id="jobItem{{ jobItems.1 }}">{{ jobItems.0 }}</div>
+      {% endfor %}
+    </div>
+    <div class="layer-confirm" id="jobConfirm">확인</div>
+  </div>
+</div>
+<header>
+  <div class="header">
+    <a href="/reco/"><i class="fas fa-satellite"></i> JOB SATELLITE</a>
+  </div>
+</header>
+<div class="main-container">
+  <div class="select-container">
+    <div class="nav-container">
+      <div class="skill-btn" id="skillBtn">
+        <i class="fas fa-code"></i> 기술 선택
+      </div>
+      <div class="job-btn" id="jobBtn">
+        <i class="fas fa-sitemap"></i> 직무 선택
+      </div>
+    </div>
+    <div class="section-container" id="skillContainer" style="display: block">
+      <div class="section-box">
+        <div class="list-box" id="skillListBox">
+          <div class="skill-noitem" id="skillNoitem" style="display: none">
+            기술을 선택해 주세요.
+          </div>
+          {% for key, category in skillData.items %}
+          <div>
+            {% for skill in category.skills %}
+            <div
+              class="selected-skill-item"
+              id="selectedSkill{{skill.1}}"
+              style="display: none"
+            >
+              <div class="skill-text">{{key}} / {{skill.0}}</div>
+              <div class="skill-close-btn">
+                <i class="far fa-times-circle"></i>
+              </div>
+            </div>
+            {% endfor %} 
+          </div>
+          {% endfor %}
+          </div>
+          <div class="add-item-box">
+            <div class="add-item-btn" id="addSkillBtn">
+              <i class="fas fa-mouse-pointer"></i> 기술 추가 (최대 10개)
+            </div>
+          </div>
+          <div
+            class="favor-option-container"
+            id="favorOptionContainer"
+            style="display: none"
+          >
+            <div class="favor-title">기업 선호도 순위를 선택해주세요.</div>
+            <div class="select-option-box" id="firstOptionBox">
+              <div class="select-option-title">1 순위</div>
+              <div class="select-option">
+                <select name="rate_no1" id="firstOption">
+                  <option value="" selected disabled hidden>
+                    기업 선호도 선택
+                  </option>
+                  <option value="salary">복지 및 급여</option>
+                  <option value="wlb">업무와 삶의 균형</option>
+                  <option value="culture">사내문화</option>
+                  <option value="possibility">승진 기회 및 가능성</option>
+                  <option value="management">경영진</option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="select-option-box"
+              id="secondOptionBox"
+              style="display: none"
+            >
+              <div class="select-option-title">2 순위</div>
+              <div class="select-option">
+                <select name="rate_no2" id="secondOption">
+                  <option value="" selected disabled hidden>
+                    기업 선호도 선택
+                  </option>
+                  <option value="salary">복지 및 급여</option>
+                  <option value="wlb">업무와 삶의 균형</option>
+                  <option value="culture">사내문화</option>
+                  <option value="possibility">승진 기회 및 가능성</option>
+                  <option value="management">경영진</option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="select-option-box"
+              id="thirdOptionBox"
+              style="display: none"
+            >
+              <div class="select-option-title">3 순위</div>
+              <div class="select-option">
+                <select name="rate_no3" id="thirdOption">
+                  <option value="" selected disabled hidden>
+                    기업 선호도 선택
+                  </option>
+                  <option value="salary">복지 및 급여</option>
+                  <option value="wlb">업무와 삶의 균형</option>
+                  <option value="culture">사내문화</option>
+                  <option value="possibility">승진 기회 및 가능성</option>
+                  <option value="management">경영진</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btns-container">
+          <div class="plus-option" id="plusOption">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="search-btn" id="searchSkillBtn">
+            <i class="fas fa-filter"></i> 검색
+          </div>
+        </div>
+      </div>
+      <div class="section-container" id="jobContainer" style="display: none">
+        <div class="section-box">
+          <div class="list-box" id="jobListBox">
+            <div class="job-noitem" id="jobNoitem" style="display: none">
+              직무를 선택해 주세요.
+            </div>
+            {% for job in jobData %}
+            <div
+              class="selected-job-item"
+              id="selectedJob{{job.1}}"
+              style="display: none"
+            >
+              <div class="skill-text">{{job.0}}</div>
+              <div class="skill-close-btn">
+                <i class="far fa-times-circle"></i>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="add-item-box">
+            <div class="add-item-btn" id="addJobBtn">
+              <i class="fas fa-mouse-pointer"></i> 직무 추가 (최대 3개)
+            </div>
+          </div>
+        </div>
+        <div class="search-btn" id="searchJobBtn">
+          <i class="fas fa-filter"></i> 검색
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</div>

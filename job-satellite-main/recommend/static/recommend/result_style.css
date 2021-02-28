@@ -1,0 +1,196 @@
+div.search-option-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid #ddd;
+}
+div.search-option-skills,
+div.search-option-favors {
+  padding: 3px;
+}
+span.option-skill {
+  display: inline-block;
+  background-color: rgb(111, 221, 221);
+  padding: 2px 5px;
+  margin-top: 3px;
+  font-size: 0.8em;
+  border-radius: 3px;
+  color: #222;
+}
+span.option-favor {
+  display: inline-block;
+  background-color: rgb(245, 173, 114);
+  padding: 2px 5px;
+  margin-top: 3px;
+  font-size: 0.8em;
+  border-radius: 3px;
+  color: #222;
+}
+div.result-jobs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2px;
+  margin: 2px;
+  margin-top: 10px;
+}
+div.result-jobs-title {
+  padding: 5px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: rgb(21, 88, 119);
+  color: #eee;
+  font-size: 1em;
+}
+div.result-job-box,
+div.result-skill-box {
+  position: relative;
+  padding: 15px 2px 10px 2px;
+  margin: 1px;
+  border: 1px solid rgb(13, 186, 216);
+  background-color: rgb(210, 238, 243);
+  cursor: pointer;
+}
+div.result-skill-box {
+  cursor: inherit;
+}
+div.result-job-box:hover,
+div.result-skill-box:hover {
+  border: 1px solid rgb(31, 211, 243);
+  background-color: rgb(161, 221, 231);
+}
+div.job-rank,
+div.skill-rank {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 2px;
+  line-height: 13px;
+  background-color: rgba(0, 67, 99, 0.5);
+  color: #eee;
+  text-align: center;
+  font-size: 0.8em;
+  border-radius: 8px;
+}
+div.job-title,
+div.skill-title {
+  font-size: 0.9em;
+  color: #444;
+  text-align: center;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #bbb;
+  margin-top: 10px;
+}
+div.result-posts-container {
+  padding: 3px;
+  margin-top: 10px;
+}
+div.result-skills-container {
+  padding: 3px;
+  margin-top: 10px;
+  background-color: #ddd;
+}
+div.result-skills-box {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+div.result-posts-title {
+  padding: 5px;
+  background-color: rgb(21, 88, 119);
+  color: #eee;
+  font-size: 1em;
+}
+div.result-skills-title {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  padding: 5px;
+  background-color: rgb(21, 88, 119);
+  color: #eee;
+  font-size: 1em;
+}
+div.result-post-box {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  padding: 3px;
+  margin: 2px 5px 5px;
+  border: 1px solid rgb(13, 186, 216);
+  background-color: rgb(210, 238, 243);
+}
+div.result-post-box:hover {
+  background-color: rgb(228, 247, 250);
+}
+div.post-company {
+  color: #555;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+div.post-region {
+  color: #777;
+  font-size: 0.7em;
+  text-align: right;
+}
+div.post-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: #222;
+  font-size: 0.9em;
+}
+div.post-job {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: #444;
+  font-size: 0.8em;
+}
+div.post-requireSkill {
+  color: #444;
+  font-size: 0.8em;
+}
+div.post-link {
+  text-align: right;
+}
+div.post-link > a {
+  color: #666;
+  font-size: 1em;
+}
+div.post-link > a:hover {
+  color: #000;
+}
+div#resultSkill1 {
+  color: #111;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+div#resultSkill1 > div.skill-rank {
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 15px;
+}
+div#resultSkill2 {
+  color: #333;
+  font-size: 1.2em;
+}
+div#resultSkill2 > div.skill-rank {
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  border-radius: 10px;
+}
+/* 가로 해상도가 576px 보다 큰 화면에 적용 */
+@media screen and (min-width: 576px) {
+}
+
+/* 가로 해상도가 768px 보다 큰 화면에 적용 */
+@media screen and (min-width: 768px) {
+}
+
+/* 가로 해상도가 992px 보다 큰 화면에 적용 */
+@media screen and (min-width: 992px) {
+  div.search-wrap {
+    width: 990px;
+    margin: 0 auto;
+  }
+}
+/* 가로 해상도가 1200px 보다 큰 화면에 적용 */
+@media screen and (min-width: 1225px) {
+}

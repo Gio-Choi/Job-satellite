@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Testing</title>
+  </head>
+  <body>
+    {% csrf_token %}
+    <h1>Prototype for main page</h1>
+    <form method="get" action="{% url 'recommend:result1'%}">
+      {% csrf_token %}
+      <fieldset>
+        <legend>맞춤 추천 서비스를 위한 정보를 입력해주세요.</legend>
+        <div>
+          <label><b>전공</b></label
+          ><br />
+          <input type="text" name="major" />
+        </div>
+        <br />
+        <div>
+          <table>
+            <th align="left">스킬</th>
+            <tr>
+              <td>
+                <label>언어</label>
+                <select name="Languages" style="height: 30px">
+                  <option value="test1">test1</option>
+                  <option value="test2">test2</option>
+                  {%for s in 언어.skills %}
+                  <option value="{{s}}">{{s}}</option>
+                  {%endfor%}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>웹개발</label>
+                <select name="Languages" style="height: 30px">
+                  {%for s in 웹개발.skills %}
+                  <option value="{{s}}">{{s}}</option>
+                  {%endfor%}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>앱개발</label>
+                <select name="Languages" style="height: 30px">
+                  {%for s in 앱개발.skills %}
+                  <option value="{{s}}">{{s}}</option>
+                  {%endfor%}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>DB</label>
+                <select name="Languages" style="height: 30px">
+                  {%for s in DB.skills %}
+                  <option value="{{s}}">{{s}}</option>
+                  {%endfor%}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>AI</label>
+                <select name="Languages" style="height: 30px">
+                  {%for s in AI.skills %}
+                  <option value="{{s}}">{{s}}</option>
+                  {%endfor%}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>빅데이터_서버</label>
+                <select name="Languages" style="height: 30px">
+                  {%for s in 빅데이터_서버.skills %}
+                  <option value="{{s}}">{{s}}</option>
+                  {%endfor%}
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <br />
+        <div>
+          <table>
+            <th align="left">기업선택 시 우선순위</th>
+            <tr>
+              <td>
+                <label>1순위</label>
+                <select name="rate_no1" style="height: 30px">
+                  <option value="salary">복지 및 급여</option>
+                  <option value="wlb">업무와 삶의 균형</option>
+                  <option value="culture">사내문화</option>
+                  <option value="possibility">승진 기회 및 가능성</option>
+                  <option value="management">경영진</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>2순위</label>
+                <select name="rate_no2" style="height: 30px">
+                  <option value="salary">복지 및 급여</option>
+                  <option value="wlb">업무와 삶의 균형</option>
+                  <option value="culture">사내문화</option>
+                  <option value="possibility">승진 기회 및 가능성</option>
+                  <option value="management">경영진</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>3순위</label>
+                <select name="rate_no3" style="height: 30px">
+                  <option value="salary">복지 및 급여</option>
+                  <option value="wlb">업무와 삶의 균형</option>
+                  <option value="culture">사내문화</option>
+                  <option value="possibility">승진 기회 및 가능성</option>
+                  <option value="management">경영진</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>4순위</label>
+                <select name="rate_no4" style="height: 30px">
+                  <option value="salary">복지 및 급여</option>
+                  <option value="wlb">업무와 삶의 균형</option>
+                  <option value="culture">사내문화</option>
+                  <option value="possibility">승진 기회 및 가능성</option>
+                  <option value="management">경영진</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>5순위</label>
+                <select name="rate_no5" style="height: 30px">
+                  <option value="salary">복지 및 급여</option>
+                  <option value="wlb">업무와 삶의 균형</option>
+                  <option value="culture">사내문화</option>
+                  <option value="possibility">승진 기회 및 가능성</option>
+                  <option value="management">경영진</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <br />
+        <input style="height: 50px; width: 200px" type="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>

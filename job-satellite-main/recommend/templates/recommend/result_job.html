@@ -1,0 +1,165 @@
+{% extends 'recommend/base.html' %} {% block content %}
+<header>
+  <div class="header">
+    <a href="/reco/"><i class="fas fa-satellite"></i> JOB SATELLITE</a>
+  </div>
+</header>
+{%if context.kind == 'skill' %}
+<div class="search-wrap">
+  <div class="search-option-container">
+    <div class="search-option-skills">
+      {% for skill in context.skills %}
+      <span class="option-skill">{{skill}}</span>
+      {% endfor %}
+    </div>
+    <div class="search-option-favors">
+      {% if context.first != None %}
+      <span class="option-favor">{{context.first}}</span>
+      {% endif %} {% if context.second != None %}
+      <span class="option-favor">{{context.second}}</span>
+      {% endif %} {% if context.third != None %}
+      <span class="option-favor">{{context.third}}</span>
+      {% endif %}
+    </div>
+  </div>
+  <div class="result-jobs-container">
+    <div class="result-jobs-title">
+      <i class="fas fa-sitemap"></i> 당신에게 가장 어울리는 직무는?
+    </div>
+    <div class="result-job-box" id="job1">
+      <div class="job-rank">1</div>
+      <div class="job-title">{{context.jobs.0}}</div>
+    </div>
+    <div class="result-job-box" id="job2">
+      <div class="job-rank">2</div>
+      <div class="job-title">{{context.jobs.1}}</div>
+    </div>
+    <div class="result-job-box" id="job3">
+      <div class="job-rank">3</div>
+      <div class="job-title">{{context.jobs.2}}</div>
+    </div>
+  </div>
+  <hr />
+  <div class="result-posts-container">
+    <div class="result-posts-title">
+      <i class="fas fa-user-edit"></i> 당신에게 가장 어울리는 공고는?
+    </div>
+    <div class="result-posts-box" id="resultPosts1">
+      {% if context.returnValue.0 %} {% for item in context.returnValue.0 %}
+      <div class="result-post-box" id="post1{{ forloop.counter }}">
+        <div class="post-company">{{item.1}}</div>
+        <div class="post-region">{{item.4}}</div>
+        <div class="post-title">{{item.2}}</div>
+        <div class="post-job">직무 : {{item.3}}</div>
+        <div class="post-requireSkill">기술 : {{item.7}}</div>
+        <div class="post-link">
+          <a href="https://www.jobplanet.co.kr{{item.5}}" target="_sub"
+            >link <i class="fas fa-link"></i
+          ></a>
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+    </div>
+    <div class="result-posts-box" id="resultPosts2" style="display: none">
+      {% if context.returnValue.1 %} {% for item in context.returnValue.1 %}
+      <div class="result-post-box" id="post2{{ forloop.counter }}">
+        <div class="post-company">{{item.1}}</div>
+        <div class="post-region">{{item.4}}</div>
+        <div class="post-title">{{item.2}}</div>
+        <div class="post-job">직무 : {{item.3}}</div>
+        <div class="post-requireSkill">기술 : {{item.7}}</div>
+        <div class="post-link">
+          <a href="https://www.jobplanet.co.kr{{item.5}}" target="_sub"
+            >link <i class="fas fa-link"></i
+          ></a>
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+    </div>
+    <div class="result-posts-box" id="resultPosts3" style="display: none">
+      {% if context.returnValue.2 %} {% for item in context.returnValue.2 %}
+      <div class="result-post-box" id="post3{{ forloop.counter }}">
+        <div class="post-company">{{item.1}}</div>
+        <div class="post-region">{{item.4}}</div>
+        <div class="post-title">{{item.2}}</div>
+        <div class="post-job">직무 : {{item.3}}</div>
+        <div class="post-requireSkill">기술 : {{item.7}}</div>
+        <div class="post-link">
+          <a href="https://www.jobplanet.co.kr{{item.5}}" target="_sub"
+            >link <i class="fas fa-link"></i
+          ></a>
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %} {%if context.kind == 'job' %}
+
+<div class="search-wrap">
+  <div class="result-jobs-container" id="resultJobs1">
+    <div class="result-jobs-title">
+      <i class="fas fa-sitemap"></i> 당신이 선택한 직무
+    </div>
+    <div class="result-job-box" id="jobToSkill1">
+      <div class="job-title">
+        {% if context.job1 != '' %}{{context.job1}}{% else %}-{% endif %}
+      </div>
+    </div>
+    <div class="result-job-box" id="jobToSkill2">
+      <div class="job-title">
+        {% if context.job2 != '' %}{{context.job2}}{% else %}-{% endif %}
+      </div>
+    </div>
+    <div class="result-job-box" id="jobToSkill3">
+      <div class="job-title">
+        {% if context.job3 != '' %}{{context.job3}}{% else %}-{% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="result-skills-container">
+    <div class="result-skills-title">
+      <i class="fas fa-user-edit"></i> 해당 직무에서 수요가 많은 기술
+    </div>
+    <div class="result-skills-box" id="resultSkillBox1">
+      {% if context.returnData.0 %} {% for skill in context.returnData.0 %}
+      <div class="result-skill-box" id="resultSkill{{forloop.counter}}">
+        <div class="skill-rank">{{forloop.counter}}</div>
+        <div class="skill-title">
+          {% if skill.0 == 'C쁠쁠' %} C++ {% elif skill.0 == 'C샵' %} C#
+          <!--  -->
+          {% elif skill.0 == 'App'%} 어플리케이션 개발 {%else%} {{skill.0}}
+          {%endif%}
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+    </div>
+    <div class="result-skills-box" id="resultSkillBox2" style="display: none">
+      {% if context.returnData.1 %} {% for skill in context.returnData.1 %}
+      <div class="result-skill-box" id="resultSkill{{forloop.counter}}">
+        <div class="skill-rank">{{forloop.counter}}</div>
+        <div class="skill-title">
+          {%if skill.0 == 'C쁠쁠'%}C++{%elif skill.0 == 'C샵'%} C#
+          <!--  -->
+          {% elif skill.0 == 'App'%} 어플리케이션 개발 {%else%} {{skill.0}}
+          {%endif%}
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+    </div>
+    <div class="result-skills-box" id="resultSkillBox3" style="display: none">
+      {% if context.returnData.2 %} {% for skill in context.returnData.2 %}
+      <div class="result-skill-box" id="resultSkill{{forloop.counter}}">
+        <div class="skill-rank">{{forloop.counter}}</div>
+        <div class="skill-title">
+          {%if skill.0 == 'C쁠쁠'%}C++{%elif skill.0 == 'C샵'%} C#
+          <!--  -->
+          {% elif skill.0 == 'App'%} 어플리케이션 개발 {%else%} {{skill.0}}
+          {%endif%}
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+    </div>
+  </div>
+  {% endif %} {% endblock %}
+</div>

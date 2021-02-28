@@ -1,0 +1,52 @@
+index,job,skill
+0,웹개발,Spring Linux TensorFlow Docker Scala PHP AngularJS HTML Jenkins PyTorch GraphQL React닷JS Ruby App Node닷js Data NoSQL Zeplin IOS C언어 Android jQuery DL Hadoop MsSQL Kotlin Kafka MongoDB Python Java JavaScript Vue닷js Ajax GCP ASP닷NET Slack Sketch AWS Oracle Redux JSP DB Azure Git WAS TypeScript Django Redis C샵 ML WEB Kubernetes Webpack JIRA ASP C쁠블 MySQL Swift Go Spark Rails Unity3D PostgreSQL CSS MariaDB 닷NET
+1,네트워크/보안/운영,Linux Spring Docker Jenkins HTML PHP Ruby App Node닷js Data NoSQL IOS C언어 Android MsSQL Kotlin MongoDB Python Java JavaScript GCP Slack AWS Oracle JSP DB Azure Git WAS Redis C샵 WEB Kubernetes JIRA C쁠블 Go MySQL Spark Kafka ASP Swift PostgreSQL CSS MariaDB 닷NET
+2,시스템엔지니어,Linux Spring Docker TensorFlow Scala PHP HTML PyTorch Jenkins AngularJS GraphQL React닷JS Ruby App Node닷js Data NoSQL Zeplin IOS C언어 Android jQuery DL Hadoop MsSQL Kotlin Illustrator MongoDB Python Java JavaScript Vue닷js Ajax GCP ASP닷NET Slack Sketch AWS Oracle Redux JSP DB Maya Azure Git WAS Redis TypeScript Django Photoshop C샵 ML WEB Kubernetes Webpack JIRA C쁠블 Go MySQL Spark Kafka ASP Swift Rails Unity3D PostgreSQL CSS MariaDB 닷NET
+3,소프트웨어엔지니어,TensorFlow Spring Linux Docker Scala AngularJS HTML PyTorch PHP Jenkins GraphQL React닷JS Ruby App Node닷js Data NoSQL Zeplin IOS C언어 CV Android jQuery DL Hadoop MsSQL Kotlin MongoDB Python Java JavaScript Vue닷js Ajax GCP ASP닷NET Slack AWS Oracle Redux JSP DB Azure Git Redis TypeScript WAS Django C샵 ML WEB Kubernetes Webpack JIRA C쁠블 Spark MySQL Swift Kafka Go ASP Rails Unity3D PostgreSQL CSS MariaDB 닷NET
+4,QA,Spring Linux Docker Jenkins GraphQL React닷JS Ruby App Node닷js Data Zeplin IOS C언어 Android jQuery Python Java JavaScript Slack Sketch AWS Redux DB Git TypeScript C샵 WEB Webpack JIRA C쁠블 Go
+5,기획,Linux TensorFlow Docker PHP HTML PyTorch React닷JS App Node닷js Data IOS Android Illustrator Python Java JavaScript GCP Sketch AWS Oracle JSP DB Azure Git Photoshop ML WEB JIRA Go C쁠블 MySQL Spark ASP Unity3D CSS
+6,데이터분석,TensorFlow Linux Docker Spring Scala PyTorch PHP HTML Jenkins React닷JS Ruby App Node닷js Data NoSQL IOS C언어 Android DL Hadoop MsSQL Kotlin MongoDB Python Java JavaScript GCP ASP닷NET Slack AWS Oracle JSP DB Maya Azure Git WAS Redis Django TypeScript ML C샵 WEB Kubernetes Spark C쁠블 Go MySQL Kafka Rails PostgreSQL CSS MariaDB
+7,모바일앱개발,Spring Linux TensorFlow Docker Scala AngularJS Jenkins HTML PHP GraphQL React닷JS App Node닷js Data NoSQL Zeplin IOS C언어 Android jQuery Hadoop MsSQL Kotlin MongoDB Python Java JavaScript Vue닷js Ajax GCP ASP닷NET Slack AWS Oracle Redux JSP DB Azure Git Redis TypeScript Django WAS C샵 WEB Kubernetes Webpack JIRA C쁠블 Spark Swift Go Kafka MySQL Unity3D PostgreSQL CSS MariaDB 닷NET
+8,프로젝트매니저,Spring Docker PHP HTML React닷JS Ruby App Node닷js Data Zeplin IOS C언어 Android Hadoop MsSQL Python Java JavaScript Vue닷js Slack Sketch AWS Oracle Redux JSP DB Maya Git Photoshop C샵 WEB Webpack JIRA C쁠블 Spark Swift MySQL Go Unity3D CSS 닷NET
+9,게임개발,Linux Spring Scala PHP HTML Jenkins React닷JS App Node닷js Data NoSQL Zeplin IOS C언어 Android jQuery Hadoop Kotlin Illustrator Kafka MongoDB Python Java JavaScript Vue닷js Ajax GCP ASP닷NET Slack AWS DB Maya Azure Git Redis TypeScript Photoshop C샵 WEB JIRA C쁠블 ASP MySQL Go Swift Spark Unity3D CSS 닷NET
+10,DBA,Spring TensorFlow Linux Docker PyTorch PHP HTML AngularJS React닷JS App Node닷js Data NoSQL C언어 jQuery DL Hadoop MsSQL MongoDB Python Java Vue닷js GCP ASP닷NET Slack AWS Oracle JSP DB Azure Git Redis TypeScript ML WEB Kubernetes JIRA Spark C쁠블 MySQL Go PostgreSQL MariaDB
+11,컨설팅,WAS Linux TensorFlow Spring CSS Hadoop WEB HTML AWS Oracle App Data DB Python Kafka Java Git Android
+12,하드웨어엔지니어,Spring Linux Docker HTML React닷JS Node닷js IOS C언어 Android Python Java JavaScript Slack DB Git WAS C샵 WEB JIRA C쁠블 Unity3D CSS
+13,캐릭터디자인,
+14,그래픽디자인,GCP Linux Photoshop Sketch C언어 WEB AWS Illustrator App C쁠블 Python Azure Zeplin IOS Maya Unity3D
+15,애니메이션디자인,
+16,마케팅,
+17,시장조사/분석,
+18,소프트웨어아키텍트,Spring Linux Docker TensorFlow Jenkins HTML PyTorch AngularJS PHP React닷JS Ruby App Node닷js Data NoSQL IOS C언어 Android DL Hadoop MsSQL Kotlin Python Java JavaScript Vue닷js GCP Slack AWS JSP DB Azure Git Redis ML C샵 WEB Kubernetes JIRA Spark Go MySQL Swift Kafka C쁠블 Rails PostgreSQL CSS MariaDB
+19,웹퍼블리셔,Spring Linux Docker AngularJS HTML Jenkins PHP GraphQL React닷JS App Node닷js Data Zeplin IOS Android jQuery Illustrator Python Java JavaScript Vue닷js Ajax Sketch Slack AWS Oracle Redux JSP DB Git TypeScript Photoshop WEB Webpack JIRA Go MySQL Unity3D CSS
+20,UI/UX/GUI디자인,Spring Docker HTML React닷JS Ruby App Node닷js Data Zeplin IOS Android jQuery Illustrator Python Java JavaScript Sketch Slack AWS Oracle Redux JSP DB Git Photoshop C샵 WEB Webpack JIRA Go C쁠블 MySQL Unity3D CSS
+21,상품개발/기획/MD,
+22,경영기획/전략,
+23,광고/시각디자인,
+24,영상/모션디자인,
+25,영업기획/관리/지원,
+26,경영지원,
+27,ERP,
+28,일러스트레이터,
+29,웹디자인,PHP HTML App Data Zeplin IOS C언어 Android jQuery MsSQL Illustrator Java JavaScript Sketch Maya Photoshop WEB ASP C쁠블 CSS 닷NET
+30,기계,
+31,전자/반도체,
+32,제어,
+33,전기,
+34,반도체/디스플레이,
+35,전기/전자/제어,
+36,국내영업,
+37,음악/음향/사운드,
+38,IT/솔루션영업,
+39,온라인마케팅,
+40,전략마케팅,
+41,브랜드디자인,
+42,브랜드마케팅,
+43,출판/편집디자인,
+44,방송연출/PD/감독,
+45,고객지원/CS,
+46,조직문화,
+47,CRM,
+48,유지/수리/정비,
+49,기술영업,
+50,제품/산업디자인,
