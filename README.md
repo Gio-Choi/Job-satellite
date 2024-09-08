@@ -1,7 +1,7 @@
 Here's the English translation of the markdown file:
 
 # Job-satellite
-## Implementation of CBF Recommendation System for Job/Job Posting for IT Job Seekers
+## CBF Recommendation System for Job/Job Posting for IT Job Seekers
 ### Awarded Second Prize in Big Data Specialization Final Project at the ‘SW Basic Competency Academy’ organized by Seoul Business Agency and Asia Economy
 
 ### Project Overview
